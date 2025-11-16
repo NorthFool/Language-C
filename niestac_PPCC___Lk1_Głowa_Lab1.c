@@ -45,8 +45,7 @@ int main() {
     } 
  
     // teraz sprawdzam parzystość 
-    printf("\nParzystosc wynikow (tylko liczby calkowite sa sprawdzane, reszta 
-nieparzysta):\n"); 
+    printf("\nParzystosc wynikow (tylko liczby calkowite sa sprawdzane, reszta nieparzysta):\n"); 
     for (int i = 0; i < 12; i++) { 
         if (wyniki[i] == (int)wyniki[i]) { 
             if ((int)wyniki[i] % 2 == 0) { 
