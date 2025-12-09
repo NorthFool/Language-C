@@ -1,0 +1,35 @@
+#include <stdio.h>  
+#include <stdlib.h>  
+#include <time.h>    
+int main() {
+    int n;
+    printf("Podaj rozmiar tablicy: ");
+    scanf("%d", &n);
+    int tablica[n];
+    srand(time(NULL));
+    for (int i = 0; i < n; i++) {
+        tablica[i] = rand() % 100 + 1;
+    }
+    int suma = 0;
+    int min = tablica[0], max = tablica[0]';
+    for (int i = 0; i < n; i++) {
+        suma += tablica[i];
+        if (tablica[i] < min) {
+            min = tablica[i];
+        }
+        if (tablica[i] > max) {
+            max = tablica[i];
+        }
+    }
+    double srednia = (double)suma / n;
+    printf("\nTablica: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", tablica[i]);
+    }
+    printf("\n");
+    printf("Suma: %d\n", suma);
+    printf("Minimum: %d\n", min);
+    printf("Maksimum: %d\n", max);
+    printf("Średnia: %.2f\n", srednia);
+    return 0;
+}
